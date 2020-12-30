@@ -1,0 +1,12 @@
+Make Nav
+
+Video header
+
+The company & what we do
+
+Colors hex
+light blue #0AEAEA
+Red #FF6B49
+dark blue #2E4057
+blackish #1E231C
+white #FFFBFF
