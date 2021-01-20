@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    transition: all ease-in-out .15s;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color:#2E4057;
+    margin: 0px;
+    margin: auto;
+}
+
+img { /*ensures all images scale up and down nicely when resizing screens*/
+    max-width: 100%;
+    height: auto;
+}
+
+/*Nav bar*/
+.nav-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    overflow:hidden;
+}
+
+.nav-wrapper span {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 1.3rem;
+    color: #FFF;
+    position: absolute;
+    top: 1.9rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-left a {
+    display: flex;
+    align-items: center;
+    background-color: #2E4057;
+    padding-right: 10px;
+    color: #FFF;
+    font-size: 24px;
+    background-size: inherit;
+    max-width: 18rem;
+}
+
+.top-logo {
+    height:4em;
+    width: auto;
+  }
+
+.nav-left a:hover {
+    background-color:#FF6B49;
+  }
+
+.nav-center{
+    margin: auto;
+    text-align: center;
+    color: #2E4057;
+}
+
+.nav-center ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 595;
+    font-size: 1.3em;
+}
+
+.nav-center a {
+	color: #2E4057;
+	text-decoration: none;
+    transition: color 0.2s;
+    margin: 0 3em;
+}
+
+.menu-items-row:hover {
+    border-bottom: 1px solid #2E4057;
+    transition: 0.2s;
+}
+
+.nav-center a:hover {
+    border-bottom: 1px solid;
+      transition: border-bottom 0.5s;
+  }
+  
+.nav-right {
+  display: grid;
+  justify-items: center;
+  padding-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.nav-right div {
+    font-size: 0.95em;
+    font-weight: 600;
+    margin: 0.3em 0;
+    color:#2E4057;
+}
+
+.contact-button {
+  color: #FF6B49;
+  background-color: #2E4057;
+  width: 22rem;
+  padding: 10px 60px;
+  margin-bottom: 0.3em;
+  text-decoration: none;
+  font-family:'Open Sans';
+  font-weight: 550;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.contact-button:hover {
+    background: #FF6B49;
+    color: #FFF;
+  }
+
+  /* Main Body Styles */
+.main-page-subtitle {
+    padding: 20px 10px;
+    text-align: center;
+    font-family: 'Alfa Slab One';
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1640px) {
+    .nav-right div {
+        font-size: 0.85em;
+        
+    }
+
+    .contact-button {
+        width: 20rem;
+    }
+
+    .nav-center a {
+        margin: 0 2em
+    }
+}
+
+@media (max-width: 1310px){ 
+
+    .title-name{
+        font-size: 0.8em;
+    }
+
+    .top-logo {
+        height: 80px;
+    }
+
+    .nav-center ul {
+        display: inline-block !important;
+        font-size: .8rem;
+    }
+
+    .nav-right div {
+        font-size: 0.7em;
+        margin: 0.2em 0;
+        letter-spacing: 0.2em;
+    }
+
+    .contact-button {
+        width: 16rem;
+        letter-spacing: 0.1em;
+    }
+ 
+    .home-hero h1 {
+        font-size:1.9rem;
+    }
+
+}
+
+@media(min-width: 800px) {
+    .nav-wrapper span {
+        display: none;
+    }
+
+    #contact-link {
+        display: none;
+    }
+}
+
+
+/*Burger menu*/
+
+.checkbtn {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    color: #FFF;
+    cursor: pointer;
+    display: none;
+    padding: .2rem .6rem;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+
+    .nav-wrapper{
+        height: 60px;
+        width: 100%;
+        background-color: #2E4057;
+    }
+
+    .title-name{
+        display: none;
+    }
+
+    .top-logo {
+        height: auto;
+    }
+
+    .nav-left {
+        width: 60px;
+        justify-content: center;
+    }
+
+    .nav-left a:hover {
+        background-color:#2E4057;
+      }
+
+    .nav-right{
+        display: none;
+    }
+
+    .checkbtn{
+        display:block;
+        font-size: 1.8em;
+    }
+
+    .nav-center ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2E4057;
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 99;
+    }
+    .nav-center ul li {
+        display: block; /*arranges dropdown menu items in a vertical list*/
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .nav-center ul li a{
+        font-size: 20px;
+        color: #FFF;
+    }
+
+    #check:checked ~ ul{ /*linked to hidden checkbox. when checked menu list appears*/
+        left: 0;
+    }
+    .home-hero{
+        background-image: url(Website%20Assets/10%20Main%20Images%201920%20-%201225/Simon-Hargreaves-film-maker-london-1.jpg); /*puts background image behind this div*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        height: 100vw;
+    }
+
+    .home-hero h1 {
+        color: #FFF;
+        font-size:1.5rem;
+        margin: 3rem;
+        position: absolute;
+        top: 12rem;
+    }
+}
+
+/* portfolio
+*****************/
+
+.portfolio {
+    margin: 3em 0 0;
+    width:100%!important;
+}
+
+.port-item {
+    margin: 0;
+    position: relative;
+}
+
+.port-item img {
+    display: block; /*port images are arrange inline block by default showing a line, break between each image. Block butts images adjacent to one another.*/
+    width:  100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.port-desc {
+    position: absolute;
+    z-index: 90; /*puts button and text on top of image*/
+    bottom: 0em;
+    left:0em; /*left and right tags can center items*/
+    right:0em;
+    color: white;
+    background: rgba(0,0,0,.5);
+    padding-bottom: 2em;
+}
+
+.port-desc p {
+    margin: 1em;
+}
+
+@media (min-width: 37rem) { /*positions pictures in grid form from this size and larger*/
+    .port-item { 
+        width: 50%;
+        float: left; 
+    }
+}
+
+@media (min-width: 65rem) {
+    .port-item {
+        width: 33.3333334%; /*makes a column of 3 on larger screens*/
+        overflow: hidden; /*hides item, text if is not within the image*/
+    }
+
+    .port-desc {
+        transform: translateY(150%)
+    }
+
+    .port-item:hover .port-desc {
+        transform: translateY(0%) /*shows port descp when hovering over it with mouse for larger screens*/
+    }
+}
